@@ -93,6 +93,7 @@ app.get("/todos/", async (request, response) => {
         todo LIKE '%${search_q}%';`;
   }
 
+  
   data = await database.all(getTodosQuery);
   response.send(data);
 });
